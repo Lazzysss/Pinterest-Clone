@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="LoginForm">
+        <form method="post">
+            {% csrf_token %}
+            <label>
+                Имя пользователя:
+            </label>
+            <input class="UserInt" type="text" name="username" placeholder="Enter Username"/>
+            
+            <label>
+                Пароль:
+            </label>
+            <input class="passwordInt" type="password" name="password" placeholder="Enter Password"/>
+            
+            <input class="submitButton" type="submit" value="Sign in"/>
+        </form>
+        <div>
+            <p>Вы еще не зарегистрированы ?</p>
+            <a href="{% url 'sign up' %}">Зарегистрироваться</a>
+            <br>
+            <br>
+            <a href="{% url 'home' %}">Назад</a>
+        </div>
+    </div>
+{% endblock %}

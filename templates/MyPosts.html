@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="container">  
+        {% for Post in product %}
+            <div class="image">
+                <a href="/detaile/{{Post.id}}"><img src="{{ Post.img.url }}"></a>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

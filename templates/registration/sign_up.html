@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form method="post" class="RegisterForm">
+        <table>
+            {{ form.as_table }}
+            {% csrf_token %}    
+            <tr>
+                <td></td>
+                <td>
+                    <input class="SignUpBtn" type="submit" value="Sign up">
+                    <a class="back1" href="{% url 'home' %}">Назад</a>
+                </td>
+            </tr>
+        </table>
+    </form>
+{% endblock %}

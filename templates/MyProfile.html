@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form method="post" class="RegisterForm">
+    	<div class="blok">
+    		<a class="Sbrosit" href="{% url 'change_password' %}">Изменить пароль</a>
+    		<a class="Sbrosit" href="{% url 'change_password' %}">Изменить имя пользователя</a>
+    	</div>
+	</form>	
+{% endblock %}

@@ -1,0 +1,542 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Lato:400,300,700,900,400italic");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #D8D8D8FF;
+}
+
+/* Изображений */
+img {
+  max-width: 100%;
+  border-radius: 15px;
+}
+
+.container {
+  margin-top: 60px;
+  margin-left: 200px;
+  column-count: 4;
+  column-gap: 5px;
+  padding: 35px;
+}
+
+
+/* Поисковая система */
+
+.search {
+  position: fixed;
+  background: #101010;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  z-index: 9999;
+}
+
+#search-int {
+  position: absolute;
+  width: 84%;
+  height: 30px;
+  outline: none;
+  border: none;
+  background: #ddd;
+  border-radius: 10px;
+  padding-left: 10px;
+  left: 15%;
+  bottom: 10px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+
+}
+
+a {
+  text-decoration: none; 
+}
+
+a:hover {
+  text-decoration: none; 
+}
+
+/* ------------ Sidenav CSS ------------- */
+
+#sidenav {
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  position: fixed;
+  font-size: 9px;
+  width: 200px;
+  height: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99999;
+  background: #101010; 
+}
+
+#sidenav.open {
+  left: -300px; 
+}
+
+#sidenav .menu {
+  position: static; 
+}
+
+#sidenav .menu ul {
+  list-style: none;
+  background: #101010;
+  padding: 1% 0;
+  margin: 0; 
+}
+
+#sidenav .menu ul li {
+  padding: 10px 14%; 
+}
+
+#sidenav .menu ul li a {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 300;
+  transition: 0.5s;
+  display: block; 
+}
+
+#sidenav .menu ul li a:hover {
+  transition: 0.5s;
+  color: rgba(255, 255, 255, 0.5); 
+}
+
+#sidenav .menu ul li a.login:hover {
+  transition: 0.5s;
+  color: red; 
+}
+
+#sidenav .menu ul li a.Register:hover {
+  transition: 0.5s;
+  color: lightgreen; 
+}
+
+#sidenav .menu ul li a.LogOut:hover {
+  transition: 0.5s;
+  color: darkred; 
+}
+
+.LogOut {
+  padding-left: 30px;
+  transition: 0.5s;
+}
+
+#sidenav .menu ul li ul {
+  list-style: none;
+  margin: 10px auto 0;
+  padding: 30px 0px;
+  border-top: solid 1px rgba(255, 255, 255, 0.08);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.08); 
+}
+          
+#sidenav .menu ul li ul li {
+  padding: 6px 3px; 
+}
+
+#sidenav .menu ul li ul li a {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7); 
+}
+
+.Username-Prof {
+  font-family: 'Montserrat', serif;
+  font-size: 12px;
+  text-align: center;
+  width: 88%;
+  padding-top: 20px;
+  color: lightgray;
+}
+
+.YourNick {
+  font-size: 15px;
+  padding-left: 40px;
+  padding-top: 10px;
+  color: whitesmoke;
+}
+
+.LoginForm {
+  margin-top: 15%;
+  margin-left: 39%;
+  font-family: 'Raleway', sans-serif;
+  width: 20%;
+  width: 300px;
+  height: 200px;
+  background: ghostwhite;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.submitButton {
+  position: relative;
+  padding: 15px;
+  top: 100px;
+  left: 110px;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  transition: 0.6s;
+  cursor: pointer;
+  background: #ddd;
+}
+
+.submitButton:hover {
+  background: black;
+  color: white;
+  transition: 0.6s;
+}
+
+.passwordInt {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  margin-left: 5px;
+  background: #e8f0fd;
+  border: none;
+  padding: 5px;
+  margin-top: 10px;
+  outline:none;
+  border-radius: 10px;
+  width: 220px;
+}
+
+.UserInt {
+  border-radius: 10px;
+  outline:none;
+  padding: 5px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  border: none;
+  background: #e8f0fd;
+}
+
+.LoginBtn {
+  position: relative;
+  bottom: 5px;
+  right: 10px;
+  font-family: 'Raleway', sans-serif;
+  text-decoration: none;
+  font-weight: 590;
+  padding: 10px;
+  background: #6abe83;
+  border-radius: 8px;
+  color: white;
+  transition: 0.6s;
+}
+
+.RegisterBtn {
+  position: relative;
+  bottom: 5px;
+  right: 12px;
+  font-family: 'Raleway', sans-serif;
+  text-decoration: none;
+  font-weight: 590;
+  padding: 10px;
+  background: #f06966;
+  margin-left: 8px;
+  border-radius: 8px;
+  color: white;
+  transition: 0.6s;
+}
+
+.LoginBtn:hover {
+  background: green;
+  transition: 0.6s;
+}
+
+.RegisterBtn:hover {
+  background: #990033;
+  transition: 0.6s;
+}
+
+.RegisterForm {
+  margin-top: 10%;
+  margin-left: 25%;
+  font-family: 'Raleway', sans-serif;
+  width: 660px;
+  height: 300px;
+  background: ghostwhite;
+  border-radius: 10px;
+  padding: 50px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.SignUpBtn {
+  padding: 15px;
+  width: 150px;
+  border-radius: 8px;
+  border: none;
+  background: lightgreen;
+  margin-top: 15px;
+  transition: 0.6s;
+  cursor: pointer;
+}
+
+.SignUpBtn:hover{
+  background: darkgreen;
+  color: white;
+  transition: 0.6s;
+}
+
+.Welcome {
+  text-align: center;
+  padding-top: 300px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.Welcome p{
+  font-weight: 600;
+}
+
+.Welcome .p2 {
+  width: 18%;
+  padding-left: 630px;
+}
+
+.success-div {
+  background: lightgreen;
+  width: 400px;
+  height: 400px;
+  margin-top: 120px;
+  margin-left: 36%;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+
+.Back {
+  position: relative;
+  padding: 25px;
+  background: #990033;
+  border-radius: 12px;
+  text-decoration: none;
+  color: white;
+  transition: 0.6s;
+  top: 30px;
+}
+
+.Back:hover {
+  background: #C00000;
+  transition: 0.6s;
+}
+
+.success-div {
+  font-family: 'Montserrat', serif;
+  font-weight: 700;
+}
+
+.Voiti-BTN {
+  position: relative;
+  padding: 25px;
+  background: #118D8E;
+  text-decoration: none;
+  left: 150px;
+  top: 120px;
+  transition: 0.6s;
+  border-radius: 15px;
+  color: white;
+}
+
+.Voiti-BTN:hover{
+  background: #C00000;
+  transition: 0.6s;
+}
+
+.back1 {
+  text-decoration: none;
+  color: black;
+}
+
+.Create {
+  position: relative;
+  right: 240px;
+  top: 60px;
+  padding: 20px 50px 20px 50px;
+  background: #118D8E;
+  font-family: 'Montserrat', serif;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+  transition: 0.5s;
+  color: white;
+}
+
+.Create:hover {
+  background: #00D1D9;
+  color: black;
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+.features {
+  font-family: 'Montserrat', serif;
+  margin-top: 10%;
+  margin-left: 35%;
+  width: 400px;
+  height: 400px;
+  background: black;
+  color: white;
+  border-radius: 15px;
+  padding: 30px;
+}
+
+.formochka {
+  width: 30px;
+  padding-left: 100px;
+  font-size: 30px;
+  padding-top: 50px;
+}
+
+.form_text {
+  font-family: 'Montserrat', serif;
+  font-weight: 800;
+  border: none;
+  width: 160px;
+  height: 30px;
+  padding-left: 50px;
+  outline: none;
+  border-radius: 8px;
+  background: #118D8E;
+  color: black;
+}
+
+.form_text::-webkit-input-placeholder {
+        color: white; }
+.form_text::-webkit-input-placeholder {
+        color: white; }
+.form_text:-moz-placeholder {
+        color: white; }
+.form_text:-ms-input-placeholder {
+        color: white; }
+
+.form_hashtag {
+  font-family: 'Montserrat', serif;
+  font-weight: 800;
+  border: none;
+  width: 130px;
+  height: 30px;
+  padding-left: 80px;
+  outline: none;
+  border-radius: 8px;
+  background: #118D8E;
+  color: black;
+}
+
+.form_hashtag::-webkit-input-placeholder {
+        color: white; }
+.form_hashtag::-webkit-input-placeholder {
+        color: white; }
+.form_hashtag:-moz-placeholder {
+        color: white; }
+.form_hashtag:-ms-input-placeholder {
+        color: white; }
+
+#file-input
+ {
+  position: relative;
+  right: 90px;
+  top: 20px;
+  font-family: 'Montserrat', serif;
+  font-weight: 800;
+  border: none;
+  width: 330px;
+  height: 70px;
+  outline: none;
+  border-radius: 8px;
+  background: #118D8E;
+  color: black;
+  padding: 30px;
+}
+
+#file-input
+::-webkit-input-placeholder {
+        color: white; }
+#file-input
+::-webkit-input-placeholder {
+        color: white; }
+#file-input
+:-moz-placeholder {
+        color: white; }
+#file-input
+:-ms-input-placeholder {
+        color: white; }
+
+.buttonSign {
+  padding: 15px;
+  margin-top: 35px;
+  margin-left: 60px;
+  border-radius: 16px;
+  outline: none;
+  font-family: 'Montserrat', serif;
+  border: none;
+  transition: 0.7s;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.buttonSign:hover{
+  transition: 0.7s;
+  background: lightgreen;
+}
+
+.image img{
+  transition: 0.7s;
+}
+
+.image img:hover {
+  filter: brightness(75%);
+  transition: 0.7s;
+}
+
+.PostDetaile {
+  font-family: 'Montserrat', serif;
+  width: 800px;
+  height: 500px;
+  border-radius: 16px;
+  margin-top: 10%;
+  margin-left: 30%;
+  border: 1px solid black;
+  font-size: 10px;
+}
+
+.DateilImg {
+  position: relative;
+  border-radius: 16px 0px 0px 16px;
+  width: 450px;
+  height: 100%;
+  bottom: 42.90%;
+}
+
+.texts {
+  width: 50%;
+  margin-left: 58%;
+  margin-bottom: 20%;
+}
+
+.Sbrosit {
+  padding: 25px;
+  background-color: skyblue;
+  border-radius: 8px;
+  transition: 0.7s;
+  color: darkblue;
+  margin: 10px;
+}
+
+.Sbrosit:hover {
+  background: blue;
+  color: white;
+  transition: 0.7s;
+}
+
+.blok {
+  display: grid;
+}

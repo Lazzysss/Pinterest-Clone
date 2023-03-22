@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+	<div class="success-div">
+		<h1>Вы успешно зарегистрировались!</h1>
+		<p>Войдите в свой аккаунт чтобы пользоваться с сайтом!</p>
+		<a class="Voiti-BTN" href="{% url 'sign in' %}">Войти</a>
+	</div>
+{% endblock %}

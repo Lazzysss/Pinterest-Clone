@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <div class="features">
+        <form method="post" enctype="multipart/form-data"> 
+            <table>
+                <tr>
+                {{ form.as_table }}
+                {% csrf_token %}    
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <input class="Create" type="submit" value="Создать">
+                        <a class="back1" href="{% url 'home' %}">Назад</a>
+                    </td>
+                </tr>
+            </table>
+        </form>    
+    </div>
+
+
+{% endblock %}

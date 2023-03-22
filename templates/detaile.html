@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<div class="PostDetaile">
+		<div class="texts">
+			<h2>Названия поста: {{ product.name }}</h2>
+			<h2>Хештеги: {{ product.hashtag }}</h2>
+			<h2>Автор: {{ product.author }}</h2>
+		</div>
+
+        <img class="DateilImg" src="{{ product.img.url }}">
+	</div>
+{% endblock %}

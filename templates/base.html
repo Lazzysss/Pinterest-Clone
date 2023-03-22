@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="{% static 'custom.css' %}">
+  <title>Pinterest Clone - home</title>
+</head>
+<body>
+  {% if user.is_authenticated %}
+  <div class="search">
+    <form action="{% url 'search_results' %}" method="GET"><input placeholder="Search.." id="search-int" type="text" name="search"></form>
+  </div>
+  {% else %}
+  {% endif %}
+
+    <div class="app">
+      <div id="sidenav">
+        <div class="wrapper">
+          <div class="menu">
+            <ul>
+              {% if user.is_authenticated %}
+              <li class="active"><a href="{% url 'home' %}">Home</a></li>
+              <!-- If login as admin -->
+              <li>
+                <a href="{% url 'MyProfile' %}">My Account</a>
+                  <ul>
+                    <li><a href="{% url 'create' %}">Create New Post</a></li>
+                    <li><a href="{% url 'MyPosts' %}">My Posts</a></li>
+                  </ul>
+              </li>
+                <p class="YourNick">Your Nickname</p>
+                <h2 class="Username-Prof">{{ user.username }}</h2>
+                <li><a class="LogOut" href="{% url 'sign out' %}">Logout</a></li>
+              {% else %}
+                <li><a href="{% url 'sign in' %}" class="login">Login</a></li>
+                <li><a href="{% url 'sign up' %}" class="Register">Register</a></li>
+              {% endif %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+{% block content %}
+  {% if user.is_authenticated %}
+    <div class="container">  
+      <div class="image">
+        {% for Post in products %}
+            <a href="/detaile/{{Post.id}}"><img src="{{ Post.img.url }}"></a>
+        {% endfor %}
+      </div>
+
+  {% else %}  
+      <div class="Welcome">
+        <h1>Добро пожаловать в сайт!</h1>
+        <p>Сайт для публикаций изображениями.</p>
+        <br>
+        <p class="p2">Для того чтобы увидеть посты, зарегистрируйтесь пожалуйста или войдите в аккаунт!</p>
+      </div>
+  {% endif %} 
+{% endblock %}
+
+</body>
+</html>
